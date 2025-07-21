@@ -1,18 +1,23 @@
-# Prompt the user for the current weather condition
-# .lower() is used to convert the input to lowercase for case-insensitive comparison
-weather = input("What's the weather like today? (sunny/rainy/cold): ").lower()
+# weather_advice.py
 
-# Provide clothing recommendations based on the input using if, elif, and else statements
-weather = input("What's the weather like? ")
+# Prompt the user to enter the current weather condition
+weather = input("What's the weather like today? (sunny/rainy/cold): ")
 
+# Check if the weather is "sunny"
 if weather == "sunny":
-    print("Wear sunglasses.")
+    # Recommend clothing for sunny weather
+    print("Wear a t-shirt and sunglasses.")
+
+# Check if the weather is "rainy"
 elif weather == "rainy":
-    print("Take an umbrella.")
-elif weather == "snowy":
-    print("Wear a coat and boots.")
+    # Recommend clothing for rainy weather
+    print("Don't forget your umbrella and a raincoat.")
+
+# Check if the weather is "cold"
+elif weather == "cold":
+    # Recommend clothing for cold weather
+    print("Make sure to wear a warm coat and a scarf.")
+
+# Handle any unexpected or unrecognized input
 else:
-    print("Sorry, I don't understand the weather condition.")
-    
-    # Handle unexpected input
-    
+    print("Sorry, I don't have recommendations for this weather.")
