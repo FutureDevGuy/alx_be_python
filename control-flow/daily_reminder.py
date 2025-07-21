@@ -40,4 +40,5 @@ else:
 
 
 # Print the customized reminder
-print(reminder_message)
+print("Reminder: drink water!")
+
