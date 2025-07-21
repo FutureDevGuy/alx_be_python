@@ -1,13 +1,13 @@
-# Prompt for a single task description
-task = input("Enter a task description: ")
+# Prompt for a single task description with the exact phrasing
+task = input("Enter your task: ")
 
-# Prompt for the task's priority (high, medium, low)
+# Prompt for the task's priority (high, medium, low) with the exact phrasing
 # Convert to lowercase for case-insensitive comparison
-priority = input("Enter the task's priority (high, medium, low): ").lower()
+priority = input("Priority (high/medium/low): ").lower()
 
-# Ask if the task is time-bound (yes or no)
+# Ask if the task is time-bound (yes or no) with the exact phrasing
 # Convert to lowercase for case-insensitive comparison
-time_bound = input("Is the task time-bound? (yes/no): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 # Initialize the reminder message
 reminder_message = ""
@@ -15,13 +15,13 @@ reminder_message = ""
 # Process the task based on priority using a Match Case statement
 match priority:
     case 'high':
-        reminder_message = f"Reminder: '{task}' is a HIGH priority task."
+        reminder_message = f"Reminder: '{task}' is a HIGH priority task"
     case 'medium':
-        reminder_message = f"Reminder: '{task}' is a MEDIUM priority task."
+        reminder_message = f"Reminder: '{task}' is a MEDIUM priority task"
     case 'low':
-        reminder_message = f"Reminder: '{task}' is a LOW priority task."
+        reminder_message = f"Reminder: '{task}' is a LOW priority task"
     case _: # Default case for invalid priority
-        reminder_message = f"Reminder: '{task}' has an UNKNOWN priority."
+        reminder_message = f"Reminder: '{task}' has an UNKNOWN priority"
 
 # Use an if statement to modify the reminder if the task is time-bound
 if time_bound == 'yes':
