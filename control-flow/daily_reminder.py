@@ -9,19 +9,24 @@ priority = input("Priority (high/medium/low): ").lower()
 # Convert to lowercase for case-insensitive comparison
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-# Initialize the reminder message
-reminder_message = ""
+# Initialize the reminder message prefix
+# This ensures "Reminder: " is always at the start
+reminder_prefix = "Reminder: "
+reminder_core = "" # This will hold the task and priority part
 
 # Process the task based on priority using a Match Case statement
 match priority:
     case 'high':
-        reminder_message = f"Reminder: '{task}' is a HIGH priority task"
+        reminder_core = f"'{task}' is a HIGH priority task"
     case 'medium':
-        reminder_message = f"Reminder: '{task}' is a MEDIUM priority task"
+        reminder_core = f"'{task}' is a MEDIUM priority task"
     case 'low':
-        reminder_message = f"Reminder: '{task}' is a LOW priority task"
+        reminder_core = f"'{task}' is a LOW priority task"
     case _: # Default case for invalid priority
-        reminder_message = f"Reminder: '{task}' has an UNKNOWN priority"
+        reminder_core = f"'{task}' has an UNKNOWN priority"
+
+# Combine prefix and core message
+reminder_message = reminder_prefix + reminder_core
 
 # Use an if statement to modify the reminder if the task is time-bound
 if time_bound == 'yes':
