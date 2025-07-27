@@ -15,8 +15,8 @@ def calculate_future_date():
     and prints it in "YYYY-MM-DD" format.
     """
     try:
-        # Prompt user for number of days
-        num_days_str = input("Enter the number of days to add: ")
+        # Prompt user for number of days with the exact required phrasing
+        num_days_str = input("Enter the number of days to add to the current date: ")
         num_days = int(num_days_str)
 
         # Get the current date (without time for simpler addition)
