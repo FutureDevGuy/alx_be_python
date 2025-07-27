@@ -1,6 +1,6 @@
 def display_menu():
     """Displays the main menu options for the shopping list manager."""
-    print("\nShopping List Manager")
+    print("\nShopping List Manager") # Ensure this line is exactly as specified
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
