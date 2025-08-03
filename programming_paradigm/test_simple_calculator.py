@@ -49,7 +49,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(0.5, 0.5), 0.25)
         self.assertEqual(self.calc.multiply(7, 1), 7) # Test multiplying by one
 
-    def test_divide(self): # <--- THIS IS THE METHOD THAT NEEDS TO BE EXACTLY AS SHOWN
+    def test_division(self): # <--- THIS IS THE METHOD THAT NEEDS TO BE EXACTLY AS SHOWN
         """
         Test the divide method with various numerical inputs, including division by zero.
         """
