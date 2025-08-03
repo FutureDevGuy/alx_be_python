@@ -24,7 +24,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.add(2.5, 3.5), 6.0)
         self.assertEqual(self.calc.add(-2.5, -3.5), -6.0)
 
-    def test_subtraction(self): # <--- THIS IS THE METHOD THAT NEEDS TO BE EXACTLY AS SHOWN
+    def test_subtraction(self):
         """
         Test the subtract method with various numerical inputs.
         """
@@ -37,7 +37,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.subtract(0, 5), -5) # Test subtracting from zero
         self.assertEqual(self.calc.subtract(5, 0), 5) # Test subtracting zero
 
-    def test_multiply(self):
+    def test_multiplication(self): # <--- THIS IS THE METHOD THAT NEEDS TO BE EXACTLY AS SHOWN
         """
         Test the multiply method with various numerical inputs.
         """
