@@ -1,5 +1,5 @@
 import unittest
-from simple_calculator import SimpleCalculator
+from simple_calculator import SimpleCalculator # Ensure simple_calculator.py is in the same directory
 
 class TestSimpleCalculator(unittest.TestCase):
     """
@@ -24,7 +24,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.add(2.5, 3.5), 6.0)
         self.assertEqual(self.calc.add(-2.5, -3.5), -6.0)
 
-    def test_subtraction(self): # <--- THIS IS THE METHOD TO ENSURE IS PRESENT AND CORRECT
+    def test_subtraction(self): # <--- THIS IS THE METHOD THAT NEEDS TO BE EXACTLY AS SHOWN
         """
         Test the subtract method with various numerical inputs.
         """
