@@ -14,10 +14,9 @@ class Book:
 
     def __str__(self):
         """
-        Returns a string representation of the book.
-        This method is used by the list_books() method in the Library class.
+        Returns a string representation of the book in the format "Book: Title by Author".
         """
-        return f"Title: {self.title}, Author: {self.author}"
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -35,9 +34,9 @@ class EBook(Book):
 
     def __str__(self):
         """
-        Overrides the __str__ method to include the file_size.
+        Overrides the __str__ method to include the file_size and prefix.
         """
-        return f"{super().__str__()}, File Size: {self.file_size}KB"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -55,9 +54,9 @@ class PrintBook(Book):
 
     def __str__(self):
         """
-        Overrides the __str__ method to include the page_count.
+        Overrides the __str__ method to include the page_count and prefix.
         """
-        return f"{super().__str__()}, Page Count: {self.page_count}"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
@@ -74,17 +73,14 @@ class Library:
     def add_book(self, book):
         """
         Adds a Book, EBook, or PrintBook instance to the library's collection.
+        This method no longer prints a message.
         """
         self.books.append(book)
-        print(f"Added '{book.title}' to the library.")
 
     def list_books(self):
         """
         Prints the details of each book in the library.
+        This method no longer prints a header.
         """
-        print("\nLibrary Contents:")
-        if not self.books:
-            print("The library is empty.")
-        else:
-            for book in self.books:
-                print(book)
+        for book in self.books:
+            print(book)
